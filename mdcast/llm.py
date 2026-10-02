@@ -29,7 +29,7 @@ def chat(prompt: str) -> str | None:
     try:
         with urllib.request.urlopen(req, timeout=config.LLM_TIMEOUT) as r:
             resp = json.loads(r.read().decode())
-        return resp["choices"]["message"]["content"].strip()
+        return resp["choices"][0]["message"]["content"].strip()
     except Exception as e:
         print(f"⚠️ LLM 调用失败（{e}），退回规则版。")
         return None
