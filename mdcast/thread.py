@@ -28,7 +28,7 @@ def strip_md(md: str) -> str:
     s = re.sub(r"`([^`]*)`", r"\1", s)
     s = re.sub(r"!\[.*?\]\(.*?\)", "", s)
     s = re.sub(r"\[(.*?)\]\(.*?\)", r"\1", s)
-    s = re.sub(r"^#{1,6}\s*", "", md, flags=re.M)
+    s = re.sub(r"^#{1,6}\s*", "", s, flags=re.M)
     s = re.sub(r"\*{1,3}(.*?)\*{1,3}", r"\1", s)
     s = re.sub(r"^\s*[-*+]\s+", "", s, flags=re.M)
     s = re.sub(r"^\s*\d+[.、]\s+", "", s, flags=re.M)
