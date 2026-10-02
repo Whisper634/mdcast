@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+x_api.env
+out/
+topics.json
+*.egg-info/
+build/
+dist/
+.DS_Store

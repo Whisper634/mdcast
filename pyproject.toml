@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mdcast"
+version = "0.1.0"
+description = "一篇 Markdown，多平台内容一键生成：X 推文串 / 口播稿+srt 字幕 / 小红书卡片"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+cards = ["playwright>=1.40"]
+
+[project.scripts]
+mdcast = "mdcast.cli:main"
+
+[tool.setuptools]
+packages = ["mdcast"]
+
+[tool.setuptools.package-data]
+mdcast = ["data/*.txt", "data/*.html"]
