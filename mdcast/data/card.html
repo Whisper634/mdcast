@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", sans-serif; background: #f5f2ec; }
+  .card {
+    width: {{W}}px; height: {{H}}px;
+    padding: 110px 100px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    page-break-after: always; position: relative;
+  }
+  .card.cover { background: #1c1a17; color: #f5f2ec; justify-content: center; }
+  .card.page  { background: #f5f2ec; color: #1c1a17; }
+  .card.end   { background: #8a3324; color: #f5f2ec; justify-content: center; text-align: center; }
+  .kicker { font-size: 34px; letter-spacing: 8px; opacity: .55; margin-bottom: 40px; }
+  .cover h1 { font-size: 92px; line-height: 1.25; font-weight: 800; }
+  .cover .hook { margin-top: 56px; font-size: 44px; line-height: 1.5; color: #d9a441; }
+  .body { font-size: 56px; line-height: 1.65; font-weight: 600; }
+  .body strong { color: #8a3324; }
+  .foot { display: flex; justify-content: space-between; align-items: flex-end;
+          font-size: 30px; opacity: .5; margin-top: 60px; }
+  .end h2 { font-size: 76px; margin-bottom: 40px; }
+  .end p { font-size: 40px; opacity: .85; line-height: 1.6; }
+  .pgnum { position: absolute; bottom: 48px; right: 64px; font-size: 26px; opacity: .4; }
+</style>
+</head>
+<body>
+{{CARDS}}
+</body>
+</html>
